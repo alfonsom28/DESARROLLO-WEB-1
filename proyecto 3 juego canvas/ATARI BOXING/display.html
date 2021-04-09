@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var div = document.createElement("div");
+            document.body.appendChild(div);
+            var canvas = document.createElement("canvas");
+            canvas.width = 100;
+            canvas.height = 300;
+           
+            var ctx = canvas.getContext("2d");
+            div.appendChild(canvas);
+            ctx.fillStyle = "red";
+            ctx.fillRect(15,80,70,210);
+            ctx.fillStyle = "black";
+            ctx.arc(50, 70, 45, 0, 2*Math.PI);
+            ctx.stroke();
+            ctx.fill();
+            var canvas2 = document.createElement("canvas");
+            var ctx2 = canvas2.getContext("2d");
+            canvas2.width = 100;
+            canvas2.height = 300;
+            div.style.backgroundColor = "yellow";
+            div.style.position = "absolute";
+            div.style.width = "200px";
+            div.style.left = "100px";
+            div.style.top = "100px";
+            div.appendChild(canvas2);
+            ctx2.fillStyle = "green";
+            ctx2.fillRect(15,80,70,210);
+            ctx2.fillStyle = "black";
+            ctx2.arc(50, 70, 45, 0, 2*Math.PI);
+            ctx2.stroke();
+            ctx2.fill();
+            var degree = 360;
+            var interval = null;
+            div.onmouseover = () => {
+                interval = setInterval(() => {
+                    degree-=2;
+                    if(degree < 0){
+                        degree = 360;
+                    }
+                    div.style.webkitTransform = "rotate(" + degree + "deg)";
+                }, 16.6666);
+            }
+            div.onmouseout = () => {
+                clearInterval(interval);
+            }
+            ctx.font = "50px consolas";
+            ctx.strokeText("HELLO", 0, 25);
+           
+        </script>
+    </body>
+</html>

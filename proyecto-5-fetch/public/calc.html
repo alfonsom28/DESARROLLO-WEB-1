@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora simple</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Una calculadora simple que envia la operacion al servidor y el servidor responde con el resultado">    
+    <meta name="keywords" content="calculadora, simple">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+    <link type="text/css" href="estilo.css" rel="stylesheet">
+    
+   
+
+</head>
+<body>
+    <script type="text/javascript" src="operacion.js"></script>
+    <header>
+        <h1 class="topic title">Calculadora Simple</h1>
+    </header>
+    <br>
+
+    <section>
+        <div>
+            <strong class="text">x:</strong><input type="text" name="x" id="x" autofocus required><br>
+            <strong class="text">y:</strong><input type="text" name="y" id="y" required><br>
+            <strong class="text">Result:</strong><input type="text" id="txt" name="result" value="0"><br><br>
+            <input class="btn button" type="button" name="+" id="+" value="+" onclick="suma()">
+            <input class="btn button" type="button" name="-" id="-" value="-" onclick="resta();">
+            <input class="btn button" type="button" name="*" id="*" value="*" onclick="multiplicacion();">
+            <input class="btn button" type="button" name="/" id="/" value="/" onclick="division();"><br>
+            <input class="btn button" type="reset" value="AC" onclick="borrar()">
+
+        </div>
+    </section>
+    <br>
+
+    <footer>Copyright &copy; Alfonso Mejia, C.I:26.860.239</footer>
+    
+</body>
+</html>

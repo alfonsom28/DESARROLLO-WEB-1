@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GRID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css">
+    <script type="text/javascript" src="JS/head.js" ></script>
+    <script src="JS/script.js"></script>
+</head>
+<body>
+    <div id="setUp">
+        <label for="title">Enter Grid Title:</label><input id="title"><br>
+        <button id="create">CREATE GRID</button>
+    </div>
+    <script>
+        var title = document.getElementById("setUp");
+        title.style.left = window.screen.width/2 - title.offsetWidth/2 + "px";
+        title.style.top = window.screen.height/2 - title.offsetHeight  + "px";
+        document.getElementById("create").onclick = ()=>{
+            var grid = document.createElement("grid-table");
+            grid.title = document.getElementById("title").value;
+            document.body.appendChild(grid);
+        }
+    </script>
+</body>
+</html>

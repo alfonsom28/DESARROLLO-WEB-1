@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Calculadora simple</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Una calculadora simple">    
+    <meta name="keywords" content="calculadora, simple">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+    <link type="text/css" href="css/style_calc_simple.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/operacion_calc_simple.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1 class="topic title">Calculadora Simple</h1>
+    </header><br>
+
+    <section>
+        <div>
+            <!--input x-->
+            <strong class="text">x:</strong><input type="text" name="x" id="x" onclick="click_eventx()"><br>
+            <!--input y-->
+            <strong class="text">y:</strong><input type="text" name="y" id="y" onclick="click_eventy()"><br>
+            <!--input result-->
+            <strong class="text">Result:</strong><input type="text" id="txt" name="result" value="0"><br><br>
+
+            <!--Botones-->
+            <input class="btn button" type="button" name="btn7" id="btn7" value="7" onclick="add_num7()">
+            <input class="btn button" type="button" name="btn8" id="btn8" value="8" onclick="add_num8()">
+            <input class="btn button" type="button" name="btn9" id="btn9" value="9" onclick="add_num9()">
+            <input class="btn button" type="reset" value="AC" onclick="borrar()"><br>
+            <input class="btn button" type="button" name="btn4" id="btn4" value="4" onclick="add_num4()">
+            <input class="btn button" type="button" name="btn5" id="btn5" value="5" onclick="add_num5()">
+            <input class="btn button" type="button" name="btn6" id="btn6" value="6" onclick="add_num6()">
+            <input class="btn button" type="button" name="+" id="+" value=" +  " onclick="suma()">
+            <input class="btn button" type="button" name="*" id="*" value="*" onclick="multiplicacion()"><br>
+            <input class="btn button" type="button" name="btn1" id="btn1" value="1" onclick="add_num1()">
+            <input class="btn button" type="button" name="btn2" id="btn2" value="2" onclick="add_num2()">
+            <input class="btn button" type="button" name="btn3" id="btn3" value="3" onclick="add_num3()">
+            <input class="btn button" type="button" name="-" id="-" value="  -  " onclick="resta()">
+            <input class="btn button" type="button" name="/" id="/" value="/" onclick="division()"><br>
+            <input class="btn button" type="button" name="btnn" id="btnn" value="-/+n" onclick="add_menos()">
+            <input class="btn button" type="button" name="btn0" id="btn0" value="0" onclick="add_num0()">
+            <input class="btn button" type="button" name="btnp" id="btnp" value="." onclick="add_nump()">
+
+        </div>
+    </section>
+    <br>
+
+    <footer>Copyright &copy; Alfonso Mejia, C.I:26.860.239</footer>
+</body>
+</html>
